@@ -1,16 +1,18 @@
 <?php include 'controller/function.php'; ?>
+ 
+ 
 <html>
     <head>
-        <title>MyPortfolio</title>
+        <title>Arianul Islam</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="styles.css" >
     </head>
     <body>
         
-   <div class="container">     
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="index.php"><img width="30px" height="30px" class="logo"       
-       src="img/curriculum.png"> MyPortfolio</a>
+       src="img/curriculum.png"> Arianul Islam</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -44,3 +46,8 @@
     </form>
   </div>
 </nav>
+   
+
+        
+        
+           <div class="container">    

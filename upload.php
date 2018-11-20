@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-       
+     <h1><?php   echo $_SESSION['fullName']  ?></h1>  
     <form enctype="multipart/form-data" action="index.php" class="m-2" method="POST">
   <div class="form-group">
     <label for="inputProjectName">Project Title</label>
@@ -17,7 +17,7 @@
     <label for="inputProjectlink">Project Link</label>
     <input name="project_link" type="text" class="form-control" id="inputProjectlink" placeholder="paste your project link..">
   </div>
-     <button type="submit" name="submit" class="btn btn-outline-success mb-2">Submit </button>      
+     <button type="submit" name="upload" class="btn btn-outline-success mb-2">Submit </button>      
 </form>
        
        
