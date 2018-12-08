@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-     <h1><?php   echo $_SESSION['fullName']  ?></h1>  
+     
     <form enctype="multipart/form-data" action="index.php" class="m-2" method="POST">
   <div class="form-group">
     <label for="inputProjectName">Project Title</label>

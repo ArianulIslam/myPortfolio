@@ -1,7 +1,7 @@
 <?php include "model/db.php"; ?>
  <?php session_start() ?>
 <?php 
-
+global $counter;
 function UploadProject(){
     
     global $connection;
@@ -81,10 +81,10 @@ function Login(){
          
          
          if(($db_email===$email) && ($password===$db_password)){
-             
+             $counter++;
              $_SESSION['email'] = $db_email;
              
-             $_SESSION['$password'] = $db_password;
+             $_SESSION['password'] = $db_password;
               $_SESSION['fullName'] = $db_fullName;
              //echo "login done";
              header("Location: upload.php ");
@@ -92,7 +92,7 @@ function Login(){
          else {
          echo "login failed";
             // header("Location: index.php ");
-             
+             $counter = 0;
          }
           
          
@@ -121,7 +121,7 @@ function SignUp(){
         }
          
          
-         
+       header("Location: login.php ");   
      }
     
 }

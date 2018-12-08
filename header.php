@@ -3,7 +3,7 @@
  
 <html>
     <head>
-        <title>Arianul Islam</title>
+        <title>Portfolio</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css" >
     </head>
@@ -12,7 +12,7 @@
  
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="index.php"><img width="30px" height="30px" class="logo"       
-       src="img/curriculum.png"> Arianul Islam</a>
+       src="img/curriculum.png"> Portfolio</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -30,14 +30,28 @@
           Dashboard
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="login.php">Log In</a>
+            <?php 
+            if($_SESSION['email']!==null) 
+            {
+ 
+              echo "<a class='dropdown-item' href='logout.php'>Log Out</a>";
+            }
+              ?>
           <a class="dropdown-item" href="register.php">Register</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="upload.php">Upload</a>
+            <?php
+            if($_SESSION['email']!==null) 
+            {
+             echo "<a class='dropdown-item' href='upload.php'>Upload</a>";
+            }else{
+                  
+                  echo "<a class='dropdown-item' href='login.php'>Login</a>";
+            }
+              ?>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
+        <a class="nav-link" href="about.php">About Us</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
